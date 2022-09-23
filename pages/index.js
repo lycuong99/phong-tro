@@ -1,7 +1,8 @@
-import { Grid } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,7 +17,10 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <Grid></Grid>
+        <Stack>
+          <Link href={"/login"}>Login</Link>
+          <Link href={"/sign-up"}>Sign up</Link>
+        </Stack>
         {/* <Typography> HELOO</Typography> */}
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.js</code>
